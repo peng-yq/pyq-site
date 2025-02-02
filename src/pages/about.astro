@@ -1,0 +1,40 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import SocialList from "@/components/SocialList.astro";
+export const prerender = true;
+
+const meta = {
+	description: "PYQ's Blog",
+	title: "About",
+};
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-8">About</h1>
+
+	<div class="prose prose-sm prose-cactus max-w-none">
+		<p>
+			I'm PYQ, currently a third-year master student in <a href="https://www.iie.ac.cn/" target="_blank">IIE, CAS</a> / <a href="https://www.ucas.ac.cn/" target="_blank">University of Chinese Academy of Sciences</a>. 
+			I'm expected to graduate in Summer 2025. And I obtained my bachelor's degree in computer science from <a href="https://www.hainanu.edu.cn/" target="_blank">Hainan University</a>. 
+		</p>
+		<p>
+			I speak Mandarin Chinese, English, and Sichuanese, the dialect of Chinese in Sichuan.
+		</p>
+		<p>
+			I am currently learning Java, web development, and Go, with a strong interest in systems within computer science. As a Linux user, I primarily work with Ubuntu and Debian. 
+			I am proficient in and enjoy using programming languages such as C, C++, Go, Java, Shell, and Python.
+			Please feel free to send me email (eilo.pengyq at foxmail dot com) if you have any questions or concerns. 
+		</p>
+		<p>Hobbies & Interests:</p>
+		<ul class="list-inside list-disc" role="list">
+			<li>PC Games (Battlefiled, Hollow Knight, Celeste...)</li>
+			<li>Movies</li>
+			<li>TV series</li>
+			<li>Music (Western Pop, JPop, KPop, Rap...)</li>
+			<li>Football (fun of CR7)</li>
+			<li>Technology (gadgets)</li>
+			<li>Learning</li>
+			<li>Books (sometimes)</li>
+		</ul>
+	</div>
+</PageLayout>
