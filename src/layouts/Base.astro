@@ -4,6 +4,7 @@ import SkipLink from "@/components/SkipLink.astro";
 import ThemeProvider from "@/components/ThemeProvider.astro";
 import Footer from "@/components/layout/Footer.astro";
 import Header from "@/components/layout/Header.astro";
+import Analytics from '@vercel/analytics/astro';
 import { siteConfig } from "@/site.config";
 import type { SiteMeta } from "@/types";
 
@@ -22,9 +23,9 @@ const {
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css"
-		/></head
-	>
-	<!-- 修改 max-w-6xl 最大宽度-->
+		/>
+		<Analytics />
+	</head>
 	<body
 		class="mx-auto flex min-h-screen max-w-4xl flex-col bg-bgColor px-4 pt-16 font-mono text-sm font-normal text-textColor antialiased sm:px-8"
 	>
