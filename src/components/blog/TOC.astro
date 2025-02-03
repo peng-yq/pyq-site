@@ -12,10 +12,35 @@ const { headings } = Astro.props;
 const toc = generateToc(headings);
 ---
 
-<aside class="sticky top-20 order-2 -me-32 hidden basis-64 lg:block">
-	<!-- 修改：目录 -->
-	<h2 class="title text-lg">目录</h2>
-	<ul class="mt-4 text-xs">
-		{toc.map((heading) => <TOCHeading heading={heading} />)}
-	</ul>
-</aside>
+<details open class="lg:sticky lg:top-20 lg:order-2 lg:-me-32 lg:basis-64 details-toc">
+    <summary class="title hover:marker:text-accent cursor-pointer text-lg">Table of Contents</summary>
+    <nav class="ms-4 lg:w-full">
+      <ol class="mt-4">
+        {toc.map((heading) => <TOCHeading heading={heading} />)}
+      </ol>
+    </nav>
+</details>
+<style>
+/* 确保 details 元素在内容过长时可以滚动（仅垂直滚动） */
+.details-toc {
+  max-height: 80vh; /* 设置最大高度 */
+  overflow-y: auto; /* 启用垂直滚动条 */
+  overflow-x: hidden; /* 禁用水平滚动条 */
+}
+/* 自定义滚动条样式，使其透明 */
+.details-toc::-webkit-scrollbar {
+  width: 8px; /* 设置滚动条宽度 */
+}
+.details-toc::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0); /* 滚动条滑块颜色，完全透明 */
+  border-radius: 4px; /* 滚动条滑块圆角 */
+}
+.details-toc::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0); /* 滚动条轨道颜色，完全透明 */
+}
+/* Firefox */
+.details-toc {
+  scrollbar-width: thin; /* 滚动条宽度 */
+  scrollbar-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0); /* 滚动条滑块颜色和轨道颜色，完全透明 */
+}
+</style>
