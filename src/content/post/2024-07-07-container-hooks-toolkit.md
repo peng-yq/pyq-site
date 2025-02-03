@@ -2,7 +2,8 @@
 title: "Container Hooks Toolkit"
 description: "个人项目 Container Hooks Toolkit 的详细介绍"
 publishDate: "2024-07-07"
-tags: ["go", "project", "cloud native"]
+updatedDate: "2025-02-03"
+tags: ["golang", "project", "cloud native"]
 ogImage: "/og.png"
 ---
 

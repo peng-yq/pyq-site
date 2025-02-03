@@ -1,20 +1,10 @@
 ---
 title: Markdown Admonitions
 description: This note showcases using the markdown admonition feature in Astro Cactus
-publishDate: "2025-02-03 20:56"
+publishDate: "2025-02-03 21:12"
 ---
 
-## Admonition Types
-
-The following admonitions are currently supported:
-
-- `note`
-- `tip`
-- `important`
-- `warning`
-- `caution`
-
-### Note
+**Note**
 
 ```md
 :::note
@@ -26,7 +16,7 @@ Highlights information that users should take into account, even when skimming.
 Highlights information that users should take into account, even when skimming.
 :::
 
-### Tip
+**Tip**
 
 ```md
 :::tip
@@ -38,7 +28,7 @@ Optional information to help a user be more successful.
 Optional information to help a user be more successful.
 :::
 
-### Important
+**Important**
 
 ```md
 :::important
@@ -50,7 +40,7 @@ Crucial information necessary for users to succeed.
 Crucial information necessary for users to succeed.
 :::
 
-### Caution
+**Caution**
 
 ```md
 :::caution
@@ -62,7 +52,7 @@ Negative potential consequences of an action.
 Negative potential consequences of an action.
 :::
 
-### Warning
+**Warning**
 
 ```md
 :::warning
@@ -74,7 +64,7 @@ Critical content demanding immediate user attention due to potential risks.
 Critical content demanding immediate user attention due to potential risks.
 :::
 
-## Customising the admonition title
+**Customising the admonition title**
 
 You can customise the admonition title using the following markup:
 
