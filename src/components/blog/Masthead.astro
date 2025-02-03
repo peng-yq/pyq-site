@@ -34,7 +34,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 	{data.title}
 </h1>
 <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
-	<p class="font-semibold">
+	<p class="font-semibold text-base mt-2">
 		<FormattedDate date={data.publishDate} dateTimeOptions={dateTimeOptions} /> /{" "}
 		{/* @ts-ignore:next-line. TODO: add reading time to collection schema? */}
 		{data.readingTime}
