@@ -1,7 +1,7 @@
 ---
 title: Markdown Frontmatter
 description: This note showcases using the markdown frontmatter feature in Astro Cactus
-publishDate: "2025-02-03 21:11"
+publishDate: "2025-02-03"
 ---
 
 **Post Frontmatter**：

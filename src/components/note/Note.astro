@@ -32,11 +32,9 @@ const { Content } = await render(note);
   <!-- 修改：narrow 年月日 -->
 	<FormattedDate
 		dateTimeOptions={{
-			hour: "2-digit",
-			minute: "2-digit",
 			year: "numeric",
 			month: "narrow",
-			day: "2-digit",
+			day: "numeric",
 		}}
 		date={note.data.publishDate}
 	/>

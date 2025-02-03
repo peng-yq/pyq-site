@@ -1,7 +1,7 @@
 ---
 title: Markdown Admonitions
 description: This note showcases using the markdown admonition feature in Astro Cactus
-publishDate: "2025-02-03 21:12"
+publishDate: "2025-02-03"
 ---
 
 **Note**
