@@ -532,6 +532,6 @@ Connection: close
 
 **测试结果**
 
-<img src="https://camo.githubusercontent.com/2e3d5a9e8a7c962360b52d2543f214961d8645fbb42e1862dd01d874f13e627e/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f70656e672d79712f47616c6c6572792f3230323430363037313033383236382e706e67">
+<img src="https://cdn.jsdelivr.net/gh/peng-yq/Gallery/202502042035237.png"/>
 
 由于`Webbench`测试方法比较简单，因此测出来的数据只能说见仁见智，我后面又用`apache-jmeter 5.6.3`进行了测试，测出来的数据肯定是没有这么好看的，但也算能在高压下稳定，“高性能”的运行。当然还是那句话，脱离业务、机器和请求量谈高性能都是耍流氓。

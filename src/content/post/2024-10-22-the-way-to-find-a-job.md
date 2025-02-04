@@ -1,24 +1,17 @@
 ---
-title: "2024计算机应届秋招总结"
+title: "2025届计算机应届秋招总结"
 description: "The way to find a job：我是如何获得自己第一份工作的"
 publishDate: "2024-10-22"
-updatedDate: "2024-12-13"
+updatedDate: "2025-02-04"
 tags: ["life"]
 ogImage: "/og.png"
 ---
 
-## the-way-to-find-a-job
 记录自己如何找到第一份工作 : ) 。
 
 > 校招是场持久战，除了个人实力外，运气也占很大成分。各位同学在笔试面试的过程中一定要放平心态，不要去怀疑自己，祝大家都找到一份满意的工作！
 
-### 目录说明
-
-1. `algo-learning`：数据结构的笔记
-2. `leetcode`：刷过的力扣题目、笔试题目记录，`ACM`模板笔记和一些其它的手撕常考题
-3. `cs-base`：八股笔记和看公众号博客中相关知识的笔记
-4. `modern-c++`：现代`c++`的笔记
-5. `pdf`：八股部分的`Markdown`导出的`PDF`
+个人秋招的所有准备/笔记等内容记录在GitHub[仓库](https://github.com/peng-yq/the-way-to-find-a-job)中。
 
 ### 时间轴
 
@@ -187,3 +180,5 @@ ogImage: "/og.png"
 *“面试结束并不意味着可以躺平。当大家拿了多个 `offer `后，就拥有了选择的权利。为了拿到让自己满意的 `offer`，我们需要做好充足的准备，才能掌握校招后半场的主动权。除了被动地等待各家公司开奖外，我们也应该主动收集一切有用的信息，不仅要发挥手中 `offer `的最大价值，也要认真谨慎地做选择，这才是对自己负责的表现。”*
 
 上面的文字来自[【方法论】校招碎碎念 - 收获 Offer 篇—imageslr](https://imageslr.com/2021/autumn-recruit-offer)，写的很好（btw这位博主其他blog也很好），这部分内容建议大家详读，这里我就不再重复造轮子了。
+
+**欢迎随意在 [GitHub 讨论区](https://github.com/peng-yq/pyq-site/discussions/5)评论并分享您对本博文的想法与疑问**。
