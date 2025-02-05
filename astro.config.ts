@@ -28,25 +28,20 @@ import decapCmsOauth from "astro-decap-cms-oauth";
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
-  adapter: vercel(),
+    site: siteConfig.url,
+    output: 'server',
+    adapter: vercel(),
     image: {
         domains: ["webmention.io"],
     },
-    integrations: [expressiveCode(expressiveCodeOptions), icon({
-  iconDir: "public/icons", // 修改：指定自定义图标目录 name = svg文件名
+        integrations: [expressiveCode(expressiveCodeOptions), icon({
+    iconDir: "public/icons", // 修改：指定自定义图标目录 name = svg文件名
 }), tailwind({
         applyBaseStyles: false,
         nesting: true,
 		}), sitemap(), mdx(), robotsTxt(), webmanifest({
         // See: https://github.com/alextim/astro-lib/blob/main/packages/astro-webmanifest/README.md
-        /**
-         * required
-         **/
         name: siteConfig.title,
-        /**
-         * optional
-         **/
         short_name: "PYQ's Blog",
         description: siteConfig.description,
         lang: siteConfig.lang,
@@ -77,7 +72,7 @@ export default defineConfig({
             insertThemeColorMeta: false,
             insertManifestLink: false,
         },
-		}), decapCmsOauth()],
+    }), decapCmsOauth()],
     markdown: {
         rehypePlugins: [
             [

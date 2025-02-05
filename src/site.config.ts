@@ -14,13 +14,14 @@ export const siteConfig: SiteConfig = {
 		},
 	},
 	// Used as the default description meta property and webmanifest description
-	description: "PYQ's Blog",
+	description: "PYQ's Blog, PYQ的博客",
 	// HTML lang property, found in src/layouts/Base.astro L:18 & astro.config.ts L:48
 	lang: "zh-CN",
 	// Meta property, found in src/components/BaseHead.astro L:42
 	ogLocale: "zh-CN",
 	// Used to construct the meta title property found in src/components/BaseHead.astro L:11, and webmanifest name found in astro.config.ts L:42
 	title: "PYQ's Blog",
+	url: "https://pengyq.dev/",
 };
 
 // Used to generate links in both the Header & Footer.
