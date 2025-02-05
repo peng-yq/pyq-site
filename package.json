@@ -21,7 +21,6 @@
 		"@astrojs/vercel": "^8.0.1",
 		"@vercel/analytics": "^1.4.1",
 		"astro": "5.0.3",
-		"astro-decap-cms-oauth": "^0.5.1",
 		"astro-expressive-code": "^0.38.3",
 		"astro-icon": "^1.1.4",
 		"astro-robots-txt": "^1.0.0",

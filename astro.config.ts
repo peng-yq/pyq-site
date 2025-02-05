@@ -23,9 +23,6 @@ import rehypeExternalLinks from "rehype-external-links";
 import rehypeUnwrapImages from "rehype-unwrap-images";
 import rehypeKatex from "rehype-katex"; // Render LaTeX with KaTeX
 
-
-import decapCmsOauth from "astro-decap-cms-oauth";
-
 // https://astro.build/config
 export default defineConfig({
     site: siteConfig.url,
@@ -34,45 +31,53 @@ export default defineConfig({
     image: {
         domains: ["webmention.io"],
     },
-        integrations: [expressiveCode(expressiveCodeOptions), icon({
-    iconDir: "public/icons", // 修改：指定自定义图标目录 name = svg文件名
-}), tailwind({
-        applyBaseStyles: false,
-        nesting: true,
-		}), sitemap(), mdx(), robotsTxt(), webmanifest({
-        // See: https://github.com/alextim/astro-lib/blob/main/packages/astro-webmanifest/README.md
-        name: siteConfig.title,
-        short_name: "PYQ's Blog",
-        description: siteConfig.description,
-        lang: siteConfig.lang,
-        icon: "public/agave.png", // the source for generating favicon & icons
-        icons: [
-            {
-                src: "icons/apple-touch-icon.png", // used in src/components/BaseHead.astro L:26
-                sizes: "180x180",
-                type: "image/png",
+    integrations: [
+        expressiveCode(expressiveCodeOptions), 
+        icon({
+            iconDir: "public/icons", // 修改：指定自定义图标目录 name = svg文件名
+        }), 
+        tailwind({
+            applyBaseStyles: false,
+            nesting: true,
+		}), 
+        sitemap(), 
+        mdx(), 
+        robotsTxt(), 
+        webmanifest({
+            // See: https://github.com/alextim/astro-lib/blob/main/packages/astro-webmanifest/README.md
+            name: siteConfig.title,
+            short_name: "PYQ's Blog",
+            description: siteConfig.description,
+            lang: siteConfig.lang,
+            icon: "public/agave.png", // the source for generating favicon & icons
+            icons: [
+                {
+                    src: "icons/apple-touch-icon.png", // used in src/components/BaseHead.astro L:26
+                    sizes: "180x180",
+                    type: "image/png",
+                },
+                {
+                    src: "icons/icon-192.png",
+                    sizes: "192x192",
+                    type: "image/png",
+                },
+                {
+                    src: "icons/icon-512.png",
+                    sizes: "512x512",
+                    type: "image/png",
+                },
+            ],
+            start_url: "/",
+            background_color: "#1d1f21",
+            theme_color: "#2bbc8a",
+            display: "standalone",
+            config: {
+                insertFaviconLinks: false,
+                insertThemeColorMeta: false,
+                insertManifestLink: false,
             },
-            {
-                src: "icons/icon-192.png",
-                sizes: "192x192",
-                type: "image/png",
-            },
-            {
-                src: "icons/icon-512.png",
-                sizes: "512x512",
-                type: "image/png",
-            },
-        ],
-        start_url: "/",
-        background_color: "#1d1f21",
-        theme_color: "#2bbc8a",
-        display: "standalone",
-        config: {
-            insertFaviconLinks: false,
-            insertThemeColorMeta: false,
-            insertManifestLink: false,
-        },
-    }), decapCmsOauth()],
+        }),         
+    ],
     markdown: {
         rehypePlugins: [
             [
@@ -86,26 +91,24 @@ export default defineConfig({
             rehypeKatex, // 添加 KaTeX 用于 LaTeX 渲染
         ],
         remarkPlugins: [
-          remarkReadingTime,
-          remarkDirective,
-          remarkAdmonitions,
-          remarkMath, // 添加 LaTeX 功能
-          remarkGemoji, // 添加 emoji 功能
+            remarkReadingTime,
+            remarkDirective,
+            remarkAdmonitions,
+            remarkMath, // 添加 LaTeX 功能
+            remarkGemoji, // 添加 emoji 功能
         ],
         remarkRehype: {
             footnoteLabelProperties: {
                 className: [""],
             },
-      footnoteLabel: '脚注：',
+            footnoteLabel: '脚注：',
         },
     },
     // https://docs.astro.build/en/guides/prefetch/
     prefetch: {
-    defaultStrategy: 'viewport',
-    prefetchAll: true,
-  },
-    // ! 改为你的网站地址，不然社交图片无法加载
-    site: "https://pengyq.dev",
+        defaultStrategy: 'viewport',
+        prefetchAll: true,
+    },
     vite: {
         optimizeDeps: {
             exclude: ["@resvg/resvg-js"],
